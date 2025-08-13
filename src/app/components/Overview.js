@@ -148,6 +148,26 @@ export default function Overview({ metadata }) {
           </dd>
         </>
         <DefRow label="Duration" value={metadata?.durationHuman || metadata?.durationISO || metadata?.durationSeconds} />
+        <DefRow label="View Count" value={metadata?.viewCount ? metadata.viewCount.toLocaleString() : null} />
+        <DefRow label="Like Count" value={metadata?.likeCount ? metadata.likeCount.toLocaleString() : null} />
+        <DefRow label="Share Count" value={metadata?.shareCount ? metadata.shareCount.toLocaleString() : null} />
+        <DefRow label="Comment Count" value={metadata?.commentCount ? metadata.commentCount.toLocaleString() : null} />
+        <DefRow label="Rating" value={metadata?.rating ? `${metadata.rating}/10` : null} />
+        <DefRow label="Rating Count" value={metadata?.ratingCount ? metadata.ratingCount.toLocaleString() : null} />
+        <DefRow label="Resolution" value={metadata?.resolution} />
+        <DefRow label="Dimensions" value={metadata?.width && metadata?.height ? `${metadata.width} × ${metadata.height}` : null} />
+        <DefRow label="Video Type" value={metadata?.videoType} />
+        <DefRow label="Quality" value={metadata?.quality} />
+        <DefRow label="File Size" value={metadata?.fileSize ? `${(metadata.fileSize / 1024 / 1024).toFixed(2)} MB` : null} />
+        <DefRow label="Category" value={metadata?.category} />
+        <DefRow label="Keywords" value={metadata?.keywords} />
+        <DefRow label="Tags" value={metadata?.tags ? metadata.tags.join(', ') : null} />
+        <DefRow label="Publisher" value={metadata?.publisher} />
+        <DefRow label="Copyright" value={metadata?.copyright} />
+        <DefRow label="License" value={metadata?.license} href={metadata?.license?.startsWith('http') ? metadata.license : null} />
+        <DefRow label="Language" value={metadata?.language} />
+        <DefRow label="Captions" value={metadata?.captions} />
+        <DefRow label="Streaming URL" value={metadata?.streamingUrl} href={metadata?.streamingUrl} />
         <DefRow label="Twitter Card" value={metadata?.twitterCard} />
         <DefRow label="Twitter Site" value={metadata?.twitterSite} />
         <DefRow label="Locale" value={metadata?.locale} />
