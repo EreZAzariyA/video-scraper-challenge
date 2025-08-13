@@ -1,6 +1,6 @@
-import { normalizeUrl } from "./lib/normalizeUrl.js";
-import { fetchHtmlWithFallback } from "./lib/fetchHtml.js";
-import { parseAllMeta } from "./lib/parseMetadata.js";
+import { normalizeUrl } from "../../../lib/normalizeUrl.js";
+import { fetchHtmlWithFallback } from "../../../lib/fetchHtml.js";
+import { parseAllMeta } from "../../../lib/parseMetadata.js";
 
 export async function POST(request) {
   try {

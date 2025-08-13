@@ -1,6 +1,6 @@
 import got from "got";
 import { Readable } from "node:stream";
-import { normalizeUrl } from "../metadata/lib/normalizeUrl.js";
+import { normalizeUrl } from "../../../lib/normalizeUrl.js";
 
 function guessFilenameFromUrl(urlString) {
 	try {
